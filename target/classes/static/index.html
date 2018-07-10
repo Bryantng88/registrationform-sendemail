@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>User form submit for new employee accounts registration</title>
+	<meta charset="utf-8" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="js/myscript.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/mycss.css">
+		
+</head>
+<body>
+		<!-- dropdown for department -->
+	 	<div class="dropdown">		    
+		    <select class="btn btn-default dropdown-toggle" type="button" id="don-vi">
+		      <option>SNP Logistics</option>
+		      <option>Marketing</option>
+		      <option>CNTT</option>
+		    </select>
+		</div>
+	
+		<!-- show boss name -->
+	  <div class="form-group">
+	    <input id="boss-name" type="text" name="textfield " class="form-control required" placeholder="chỉ huy đơn vị" >
+	  </div>
+
+	  <div class="alert alert-warning" id="alert1">vui lòng điền tên chỉ huy đơn vị </div>
+
+	  <!-- radio button needs js for turn on/off -->
+	  <div class="form-group">
+	  		<label class="radio-inline"><input type="radio" name="radiobox" value="tao moi" id="new" >tạo mới</label>		
+	  		<label class="radio-inline"><input type="radio" name="radiobox" value="dieu chinh" id="modify" >điều chỉnh</label>
+	  </div>
+
+	  <div class="alert alert-warning" id="alert2">vui lòng chọn tạo mới hoặc điều chỉnh</div>
+
+	  <!-- on when click tao moi -->
+	  <div id="account">	  		
+        	<label class="form-check-inline"><input type="checkbox" value="email" id="emailchecker"> email</label>
+        	<label class="form-check-inline"><input type="checkbox" value="vpn" id="vpnchecker"> vpn</label>
+        	<label class="form-check-inline"><input type="checkbox" value="eoffice" id="eofficechecker"> eoffice</label>
+	  </div>
+
+	  <!-- on when click dieu chinh-->
+	  <div>
+	  	<textarea id="description" placeholder="điều chỉnh" rows="4" cols="26"></textarea>
+	  </div>
+
+	  <div>
+		  <button id="template" type="submit" class="btn btn-default"><a href="files/template.docx" download>template</a></button><br>
+		  <label>upload file</label>
+		  <input type="file" id="files" class="btn btn-default"></input><br>
+		  <div class="alert alert-warning" id="alert3">vui lòng chọn file</div>
+		  <label>upload hình ảnh</label>
+		  <input type="file" id="images" class="btn btn-default"></input><br>
+		  <div class="alert alert-warning" id="alert4">vui lòng chọn hình ảnh</div>
+		  <button type="button" class="btn btn-default" id="btnSubmit">submit</button>
+	  </div>
+
+</body>
+</html>

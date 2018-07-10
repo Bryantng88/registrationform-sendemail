@@ -1,0 +1,31 @@
+body{
+	border: 1px solid black;
+	height: 650px;
+	width: 400px;
+	margin-top: 50px;
+	margin-left: 500px;
+	padding: 20px;
+
+}
+
+
+
+body div{
+	margin: 5px;
+}
+
+#account{
+	display: none;
+}
+
+#description{
+	display: none;
+}
+
+.alert {
+	display: none;
+	height: 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 10px;   
+}
